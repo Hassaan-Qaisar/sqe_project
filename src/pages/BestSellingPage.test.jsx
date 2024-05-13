@@ -1,23 +1,9 @@
-/*
-Testing Strategy:
-- Boundary Value Testing:
-  - Branding Section:
-    - Test rendering with brandingData provided.
-    - Test rendering without brandingData.
-    - Test rendering with empty brandingData array.
-    - Test rendering with maximum characters in branding titles and descriptions.
-    - Test rendering with branding titles and descriptions as empty strings.
-  - Categories Section:
-    - Test rendering with categoriesData provided.
-    - Test rendering without categoriesData.
-    - Test rendering with empty categoriesData array.
-    - Test rendering with maximum category items.
-    - Test rendering with special characters in category titles/descriptions.
-*/
+
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import Categories from "./Categories";
+import Categories from "../components/Route/Categories/Categories";
+
 
 describe("Categories Component", () => {
   test("renders branding section when brandingData is provided", () => {
@@ -35,6 +21,7 @@ describe("Categories Component", () => {
     const brandingSection = screen.getByTestId("branding-section");
     expect(brandingSection).toBeInTheDocument();
 
+    // You can add more assertions to test the content of the branding section
   });
 
   test("renders categories section when categoriesData is provided", () => {
@@ -52,7 +39,7 @@ describe("Categories Component", () => {
     const categoriesSection = screen.getByTestId("categories-section");
     expect(categoriesSection).toBeInTheDocument();
 
-    
+    // You can add more assertions to test the content of the categories section
   });
   test("renders branding section without brandingData", () => {
     render(
@@ -176,3 +163,5 @@ describe("Categories Component", () => {
   });
   
 });
+
+

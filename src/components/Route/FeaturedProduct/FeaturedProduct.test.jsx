@@ -1,5 +1,12 @@
-// FeaturedProduct.test.jsx
-
+/*
+Testing Strategy:
+- Boundary Value Testing:
+  - Featured Products Heading:
+    - Test rendering when there are no products.
+    - Test rendering when products are available.
+  - No Products Message:
+    - Test displaying the message when there are no featured products available.
+*/
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";

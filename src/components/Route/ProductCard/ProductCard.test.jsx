@@ -1,8 +1,18 @@
+/*
+Testing Strategy:
+- Boundary Value Testing:
+  - Product Name Rendering:
+    - Test rendering the product name correctly.
+  - Shop Name Rendering:
+    - Test rendering the shop name correctly.
+  - Component Reusability:
+    - Test the reusability of the ProductCard component by rendering it multiple times.
+*/
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
-import { BrowserRouter as Router } from "react-router-dom"; // Import BrowserRouter
+import { BrowserRouter as Router } from "react-router-dom"; 
 import ProductCard from "./ProductCard";
 
 const mockStore = configureStore([]);
@@ -25,7 +35,7 @@ describe("ProductCard Component", () => {
 
     render(
       <Provider store={store}>
-        <Router> {/* Wrap ProductCard with Router */}
+        <Router> 
           <ProductCard data={data} />
         </Router>
       </Provider>
@@ -52,7 +62,7 @@ describe("ProductCard Component", () => {
 
     render(
       <Provider store={store}>
-        <Router> {/* Wrap ProductCard with Router */}
+        <Router>
           <ProductCard data={data} />
         </Router>
       </Provider>
@@ -79,7 +89,7 @@ describe("ProductCard Component", () => {
 
     render(
       <Provider store={store}>
-        <Router> {/* Wrap ProductCard with Router */}
+        <Router>
           <ProductCard data={data} />
         </Router>
       </Provider>
@@ -106,7 +116,7 @@ describe("ProductCard Component", () => {
 
     render(
       <Provider store={store}>
-        <Router> {/* Wrap ProductCard with Router */}
+        <Router>
           <ProductCard data={data} />
         </Router>
       </Provider>
@@ -133,7 +143,7 @@ describe("ProductCard Component", () => {
 
     render(
       <Provider store={store}>
-        <Router> {/* Wrap ProductCard with Router */}
+        <Router>
           <ProductCard data={data} />
         </Router>
       </Provider>
@@ -160,7 +170,7 @@ describe("ProductCard Component", () => {
 
     render(
       <Provider store={store}>
-        <Router> {/* Wrap ProductCard with Router */}
+        <Router>
           <ProductCard data={data} />
         </Router>
       </Provider>
@@ -170,5 +180,4 @@ describe("ProductCard Component", () => {
     expect(shopName).toBeInTheDocument();
   });
 
-  // Add more test cases for other elements and interactions similarly
 });

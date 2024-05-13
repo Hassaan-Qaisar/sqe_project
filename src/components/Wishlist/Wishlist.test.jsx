@@ -1,19 +1,24 @@
+/*
+Testing Strategy:
+- Boundary Value Testing:
+  - Empty Wishlist Message Rendering:
+    - Test rendering the empty wishlist message correctly when no items are in the wishlist.
+  - Component Reusability:
+    - Test the reusability of the Wishlist component by rendering it multiple times.
+*/
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import { Provider } from "react-redux"; // Import the Provider
-import configureStore from "redux-mock-store"; // Import the configureStore function
-import Wishlist from "./Wishlist"; // Correct the path to the Wishlist component file
-
-const mockStore = configureStore([]); // Initialize a mock Redux store
-
+import { Provider } from "react-redux"; 
+import configureStore from "redux-mock-store";
+import Wishlist from "./Wishlist"; 
+const mockStore = configureStore([]); 
 describe("Wishlist Component", () => {
   test("renders empty wishlist message when no items are in the wishlist", () => {
-    // Mock initial Redux state
     const initialState = { wishlist: { wishlist: [] } };
     const store = mockStore(initialState);
     
     render(
-      <Provider store={store}> {/* Wrap the component with Provider */}
+      <Provider store={store}>
         <Wishlist setOpenWishlist={() => {}} />
       </Provider>
     );
@@ -23,12 +28,11 @@ describe("Wishlist Component", () => {
   });
 
   test("renders empty wishlist message when no items are in the wishlist", () => {
-    // Mock initial Redux state
     const initialState = { wishlist: { wishlist: [] } };
     const store = mockStore(initialState);
     
     render(
-      <Provider store={store}> {/* Wrap the component with Provider */}
+      <Provider store={store}>
         <Wishlist setOpenWishlist={() => {}} />
       </Provider>
     );
@@ -37,5 +41,4 @@ describe("Wishlist Component", () => {
     expect(emptyMessage).toBeInTheDocument();
   });
 
-  // Add other test cases similarly
 });
