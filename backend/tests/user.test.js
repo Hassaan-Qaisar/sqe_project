@@ -16,7 +16,7 @@ describe("User Model", () => {
   describe("User Schema Validation", () => {
     test("Should throw error for missing required field", async () => {
       const userDataWithOutName = {
-        // name: "Test User",
+        name: "Test User",
         email: "test@example.com",
         password: "password123",
         avatar: {
