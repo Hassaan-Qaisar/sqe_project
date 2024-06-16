@@ -1,0 +1,454 @@
+{
+	"info": {
+		"_postman_id": "a25fa69f-5ad5-42d4-9cda-497164616f75",
+		"name": "SQE Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27966557"
+	},
+	"item": [
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"irumusmani786@gmail.com\",\r\n    \"password\": \"test123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/user/login-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"user",
+						"login-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/user/getuser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"user",
+						"getuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log out user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/user/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"user",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/user/user-info/66347f8919c26f5f96da3730",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"user",
+						"user-info",
+						"66347f8919c26f5f96da3730"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"irumusmani786@gmail.com\",\r\n    \"password\":\"test123\",\r\n    \"phoneNumber\":\"123456789\",\r\n    \"name\":\"XYZ\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/user/update-user-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"user",
+						"update-user-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2MzQ3Zjg5MTljMjZmNWY5NmRhMzczMCIsImlhdCI6MTcxNDc2MTY3OSwiZXhwIjoxNzE1MzY2NDc5fQ.N16SpLvYRpr0KBhccalsk75m0bcEvm5nkhhjCjzyEtw\""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"oldPassword\":\"test123\",\r\n    \"newPassword\":\"test123\",\r\n    \"confirmPassword\":\"test123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/user/update-user-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"user",
+						"update-user-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/product/get-all-products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"product",
+						"get-all-products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shopId\": \"6589eba0c06dd8c406f2685d\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/product/create-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"product",
+						"create-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product of specific shop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/product/get-all-products-shop/6589eba0c06dd8c406f2685d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"product",
+						"get-all-products-shop",
+						"6589eba0c06dd8c406f2685d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/product/delete-shop-product/658bce15cb6a7faf12cedefa",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"product",
+						"delete-shop-product",
+						"658bce15cb6a7faf12cedefa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login shop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"hassaanqaisar2@gmail.com\",\r\n    \"password\":\"hassaan\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/shop/login-shop",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"shop",
+						"login-shop"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get seller details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "cookies",
+						"value": "seller_token"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/shop/getSeller/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"shop",
+						"getSeller",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update shop details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"shop\":\"Apple inc\",\r\n    \"description\":\"We deal with tech gadgets\",\r\n    \"address\":\"Bank Rd, Saddar, Rwp\",\r\n    \"phoneNumber\":\"3149875336\",\r\n    \"zipCode\":\"1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/shop/update-seller-info",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"shop",
+						"update-seller-info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get orders of a user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/order/get-all-orders/66347f8919c26f5f96da3730",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"order",
+						"get-all-orders",
+						"66347f8919c26f5f96da3730"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get orders of a shop",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/v2/order/get-all-orders/6589eba0c06dd8c406f2685d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"order",
+						"get-all-orders",
+						"6589eba0c06dd8c406f2685d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update order status",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\":\"Transferred to delivery partner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/v2/order/update-order-status/6634808ffdcd1290fd12c540",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v2",
+						"order",
+						"update-order-status",
+						"6634808ffdcd1290fd12c540"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
